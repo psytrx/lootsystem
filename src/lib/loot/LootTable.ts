@@ -1,6 +1,6 @@
 import type { Item } from './Item';
 
-type LootTableEntry = {
+export type LootTableEntry = {
 	item: Item;
 	chance: number;
 };

@@ -10,15 +10,15 @@
 			isPlayer: true,
 			race: Rng.pick([...races]),
 			level: Rng.int(1, 100),
-			class: Rng.pick(classes)
+			class: Rng.pick([...classes])
 		},
 		{
 			id: crypto.randomUUID(),
 			isPlayer: false,
 			race: Rng.pick([...races]),
 			level: Rng.int(1, 100),
-			class: Rng.pick(classes),
-			isCorrupted: true,
+			class: Rng.pick([...classes]),
+			isCorrupted: Rng.chance(0.1),
 			tags: []
 		}
 	];

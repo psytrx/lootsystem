@@ -24,19 +24,16 @@ function getLootTablesForEnemy(enemy: Enemy) {
 	const tables: LootTable[] = [];
 
 	// We start with a shared base loot table for all enemies
-	tables.push(lootTables.base);
+	tables.push(lootTables.general);
 
-	// Depending on the enemy's race, we add more loot tables
-	const raceLootTable = lootTables.races[enemy.race];
-	if (raceLootTable) {
-		tables.push(raceLootTable);
-	}
-
-	// Same for classes
-	const classLootTable = lootTables.classes[enemy.class];
-	if (classLootTable) {
-		tables.push(classLootTable);
-	}
+	// Check if we have a race/class specific loot table
+	// const raceClassLootTable = lootTables.byRaceAndClass[enemy.race];
+	// if (raceClassLootTable) {
+	// 	const classLootTable = raceClassLootTable[enemy.class];
+	// 	if (classLootTable) {
+	// 		tables.push(classLootTable);
+	// 	}
+	// }
 
 	// If the enemy is corrupted, a few specific items can drop
 	if (enemy.isCorrupted) {

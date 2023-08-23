@@ -13,7 +13,7 @@ export const classes = [
 	'druid',
 	'artificer',
 	'monk'
-];
+] as const;
 
 export type EnemyClass = (typeof classes)[number];
 
