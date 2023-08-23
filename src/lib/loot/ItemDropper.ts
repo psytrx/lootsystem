@@ -1,4 +1,8 @@
+import { Rng } from '$lib/rng';
 import type { Enemy } from './Enemy';
+import type { Item } from './Item';
+import type { LootTable } from './LootTable';
+import { lootTables } from './loot-tables';
 
 const options = {
 	enemyMaxLevel: 100
@@ -6,9 +10,31 @@ const options = {
 
 export const ItemDropper = {
 	dropItems(enemy: Enemy) {
-		const multiplier = calculateBaseDropMultiplier(enemy);
 		const tags = getLootTagsForEnemy(enemy);
-		console.log(tags);
+
+		const tables: LootTable[] = [];
+		tags.forEach((tag) => {
+			const table = lootTables[tag];
+			if (table) {
+				tables.push(table);
+			}
+		});
+
+		const multiplier = calculateBaseDropMultiplier(enemy);
+
+		const items: Item[] = [];
+		tables.forEach((table) => {
+			table.forEach((entry) => {
+				const threshold = multiplier * entry.chance;
+				const r = Rng.uniform(0, 1);
+
+				if (r < threshold) {
+					items.push(entry.item);
+				}
+			});
+		});
+
+		return items;
 	}
 };
 
@@ -55,5 +81,12 @@ function calculateBaseDropMultiplier(enemy: Enemy) {
 	const base = Math.tanh(enemy.level / (options.enemyMaxLevel / 2));
 	// Clamp multiplier between 0 and 1
 
-	return Math.max(0, Math.min(1, base));
+	const clamped = Math.max(0, Math.min(1, base));
+
+	// If enemy is a boss (he has a title), multiply with boss level
+	if (enemy.title) {
+		return clamped * enemy.level;
+	}
+
+	return clamped;
 }

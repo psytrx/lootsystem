@@ -72,5 +72,3 @@ export const lootTables: Record<string, LootTable> = {
 		};
 	}, {})
 };
-
-console.log(lootTables);
