@@ -35,7 +35,7 @@ function getLootTagsForEnemy(enemy: Enemy) {
 	tags.push(`class:${enemy.class}`);
 
 	// Add race-class-specific tags
-	tags.push(`race:${enemy.race};class:${enemy.class}`);
+	tags.push(`race:${enemy.race} class:${enemy.class}`);
 
 	return tags;
 }
