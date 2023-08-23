@@ -1,0 +1,22 @@
+export const nagaNames = [
+	'Venomous Serpent',
+	'Naga Marauder',
+	'Serpentine Stalker',
+	'Scalebound Ravager',
+	'Constricting Adder',
+	'Abyssal Siren',
+	'Viperblade Assassin',
+	'Envenomed Conqueror',
+	'Sea Serpent',
+	'Serpentkin Harbinger',
+	'Naga Enforcer',
+	'Serpentine Sorceress',
+	'Deepcoil Marauder',
+	'Crimson Seraph',
+	'Voracious Viper',
+	'Cursed Serpent',
+	'Coralcoil Invoker',
+	'Dreadnought Naga',
+	'Thalassian Guardian',
+	'Crimsonscale Devourer'
+];

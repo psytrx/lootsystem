@@ -1,3 +1,4 @@
+import type { Item } from '../Item';
 import type { ClassItems } from './types';
 
 export const feyfolkClassItems: ClassItems = {
@@ -44,3 +45,16 @@ export const feyfolkClassItems: ClassItems = {
 		{ name: 'Harmony Staff', category: 'two-handed weapon' }
 	]
 };
+
+export const feyfolkItems: Item[] = [
+	{ name: 'Enchanted Flower Crown', category: 'accessory' },
+	{ name: 'Feyglow Lantern', category: 'light source' },
+	{ name: 'Whisperwind Flute', category: 'instrument' },
+	{ name: 'Faerie Dust Vial', category: 'consumable' },
+	{ name: 'Moonlit Coin', category: 'coin' },
+	{ name: 'Elven Script Scroll', category: 'scroll' },
+	{ name: "Nature's Pouch", category: 'bag' },
+	{ name: 'Thornweave Bracelet', category: 'accessory' },
+	{ name: 'Feyfolk Trinket', category: 'accessory' },
+	{ name: 'Starlit Crystal', category: 'crafting material' }
+];

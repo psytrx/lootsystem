@@ -19,6 +19,8 @@ export type EnemyClass = (typeof classes)[number];
 
 interface BaseEnemy {
 	id: string;
+	name: string;
+	title?: string;
 	race: EnemyRace;
 	class: EnemyClass;
 	level: number;
@@ -31,7 +33,6 @@ interface PlayerEnemy {
 interface NonPlayerEnemy {
 	isPlayer: false;
 	isCorrupted: boolean;
-	tags: string[];
 }
 
 export type Enemy = BaseEnemy & (PlayerEnemy | NonPlayerEnemy);

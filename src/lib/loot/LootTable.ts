@@ -5,7 +5,4 @@ export type LootTableEntry = {
 	chance: number;
 };
 
-export interface LootTable {
-	id: string;
-	entries: LootTableEntry[];
-}
+export type LootTable = LootTableEntry[];

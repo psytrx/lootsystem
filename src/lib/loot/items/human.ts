@@ -1,3 +1,4 @@
+import type { Item } from '../Item';
 import type { ClassItems } from './types';
 
 export const humanClassItems: ClassItems = {
@@ -72,3 +73,16 @@ export const humanClassItems: ClassItems = {
 		{ name: 'Staff of Inner Balance', category: 'two-handed weapon' }
 	]
 };
+
+export const humanItems: Item[] = [
+	{ name: "Merchant's Coin", category: 'coin' },
+	{ name: "Adventurer's Map", category: 'miscellaneous' },
+	{ name: 'Herbal Remedy', category: 'consumable' },
+	{ name: 'Ancestral Pendant', category: 'accessory' },
+	{ name: 'Historical Chronicle', category: 'book' },
+	{ name: 'Casting Glove', category: 'tool' },
+	{ name: "Traveler's Journal", category: 'book' },
+	{ name: 'Village Quill', category: 'writing tool' },
+	{ name: 'Human Keepsake', category: 'miscellaneous' },
+	{ name: 'Tavern Dice Set', category: 'game' }
+];

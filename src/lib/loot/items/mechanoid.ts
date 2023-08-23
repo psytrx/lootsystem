@@ -1,3 +1,4 @@
+import type { Item } from '../Item';
 import type { ClassItems } from './types';
 
 export const mechanoidClassItems: ClassItems = {
@@ -72,3 +73,16 @@ export const mechanoidClassItems: ClassItems = {
 		{ name: 'Cogstaff', category: 'two-handed weapon' }
 	]
 };
+
+export const mechanoidItems: Item[] = [
+	{ name: 'Cogwork Widget', category: 'crafting material' },
+	{ name: 'Circuitry Blueprint', category: 'scroll' },
+	{ name: 'Oil Flask', category: 'consumable' },
+	{ name: 'Techno Coin', category: 'coin' },
+	{ name: 'Gyromech Key', category: 'accessory' },
+	{ name: 'Scrap Metal Pouch', category: 'bag' },
+	{ name: 'Enhancement Kit', category: 'tool' },
+	{ name: 'Schematic Scroll', category: 'scroll' },
+	{ name: 'Mechanoid Identifier', category: 'accessory' },
+	{ name: 'Electric Torch', category: 'light source' }
+];

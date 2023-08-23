@@ -1,0 +1,22 @@
+export const celestialNames = [
+	'Astral Wisp',
+	'Celestial Luminary',
+	'Seraphic Emissary',
+	'Heavenly Guardian',
+	'Starborn Herald',
+	'Ethereal Sentinel',
+	'Luminous Specter',
+	'Divine Ascendant',
+	'Celestial Arbiter',
+	'Radiant Watcher',
+	'Cosmic Warden',
+	'Aureate Harbinger',
+	'Ephemeral Archon',
+	'Astralcaster',
+	'Celestial Aegis',
+	'Ethereal Beholder',
+	'Lustrous Seraph',
+	'Aetheric Warden',
+	'Solemn Celestial',
+	'Vestal Herald'
+];

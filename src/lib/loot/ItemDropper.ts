@@ -1,6 +1,4 @@
 import type { Enemy } from './Enemy';
-import type { LootTable } from './LootTable';
-import { lootTables } from './loot-tables';
 
 const options = {
 	enemyMaxLevel: 100
@@ -9,38 +7,37 @@ const options = {
 export const ItemDropper = {
 	dropItems(enemy: Enemy) {
 		const multiplier = calculateBaseDropMultiplier(enemy);
-		const tables = getLootTablesForEnemy(enemy);
-		console.log(tables);
+		const tags = getLootTagsForEnemy(enemy);
+		console.log(tags);
 	}
 };
 
-function getLootTablesForEnemy(enemy: Enemy) {
+function getLootTagsForEnemy(enemy: Enemy) {
 	// If it's a player character, only drop PvP specific items
 	if (enemy.isPlayer) {
-		return [lootTables.pvp];
+		return ['pvp'];
 	}
 
-	// Use strong typing here so we get proper autocomplete based on the defined loot tables.
-	const tables: LootTable[] = [];
+	const tags: string[] = [];
 
 	// We start with a shared base loot table for all enemies
-	tables.push(lootTables.general);
-
-	// Check if we have a race/class specific loot table
-	// const raceClassLootTable = lootTables.byRaceAndClass[enemy.race];
-	// if (raceClassLootTable) {
-	// 	const classLootTable = raceClassLootTable[enemy.class];
-	// 	if (classLootTable) {
-	// 		tables.push(classLootTable);
-	// 	}
-	// }
+	tags.push('general');
 
 	// If the enemy is corrupted, a few specific items can drop
 	if (enemy.isCorrupted) {
-		tables.push(lootTables.corrupted);
+		tags.push('corrupted');
 	}
 
-	return tables;
+	// Add race-specific tags
+	tags.push(`race:${enemy.race}`);
+
+	// Add class-specific tags
+	tags.push(`class:${enemy.class}`);
+
+	// Add race-class-specific tags
+	tags.push(`race:${enemy.race};class:${enemy.class}`);
+
+	return tags;
 }
 
 function calculateBaseDropMultiplier(enemy: Enemy) {

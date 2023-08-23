@@ -1,3 +1,4 @@
+import type { Item } from '../Item';
 import type { ClassItems } from './types';
 
 export const celestialClassItems: ClassItems = {
@@ -37,3 +38,16 @@ export const celestialClassItems: ClassItems = {
 		{ name: 'Staff of the Cosmos', category: 'two-handed weapon' }
 	]
 };
+
+export const celestialItems: Item[] = [
+	{ name: 'Starlight Pendant', category: 'accessory' },
+	{ name: 'Celestial Incense', category: 'consumable' },
+	{ name: 'Astral Rune', category: 'scroll' },
+	{ name: 'Seraphic Feather', category: 'crafting material' },
+	{ name: 'Ethereal Elixir', category: 'potion' },
+	{ name: 'Heavenforged Coin', category: 'coin' },
+	{ name: 'Divine Lyre', category: 'instrument' },
+	{ name: 'Enchanted Quill', category: 'writing tool' },
+	{ name: 'Celestial Locket', category: 'accessory' },
+	{ name: 'Guiding Star Map', category: 'miscellaneous' }
+];

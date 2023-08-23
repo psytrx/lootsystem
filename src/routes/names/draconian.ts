@@ -1,0 +1,22 @@
+export const draconianNames = [
+	'Drake Marauder',
+	'Serpentine Skaal',
+	'Wyrmkin Marauder',
+	'Scalebound Ravager',
+	'Crimson Reaver',
+	'Dragonfire Invoker',
+	'Draconic Sentinel',
+	'Wyrmguard Marauder',
+	'Netherclaw Serpent',
+	'Searing Wyrm',
+	'Basilisk Stalker',
+	'Crimson Drake',
+	'Vermillion Scourge',
+	'Abyssal Serpent',
+	'Inferno Wyrmling',
+	'Molten Scalebound',
+	'Serpentkin Ravager',
+	'Volcanic Drakon',
+	'Serpentine Enforcer',
+	'Dreadfire Wyrm'
+];

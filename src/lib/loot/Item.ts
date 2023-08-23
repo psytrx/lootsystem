@@ -11,7 +11,15 @@ const itemCategory = [
 	'miscellaneous',
 	'scroll',
 	'accessory',
-	'collectible'
+	'collectible',
+	'consumable',
+	'writing tool',
+	'instrument',
+	'bag',
+	'tool',
+	'light source',
+	'book',
+	'game'
 ] as const;
 
 interface BaseItem {

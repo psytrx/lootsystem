@@ -1,3 +1,4 @@
+import type { Item } from '../Item';
 import type { ClassItems } from './types';
 
 export const nagaClassItems: ClassItems = {
@@ -72,3 +73,16 @@ export const nagaClassItems: ClassItems = {
 		{ name: 'Serpentstaff', category: 'two-handed weapon' }
 	]
 };
+
+export const nagaItems: Item[] = [
+	{ name: 'Serpent Scale Amulet', category: 'accessory' },
+	{ name: 'Venomous Vial', category: 'consumable' },
+	{ name: 'Serpentine Coil', category: 'crafting material' },
+	{ name: 'Naga Script Scroll', category: 'scroll' },
+	{ name: 'Serpent Eye Gem', category: 'accessory' },
+	{ name: 'Cobra Fang Dagger', category: 'one-handed weapon' },
+	{ name: 'Serpent Tail Bracelet', category: 'accessory' },
+	{ name: 'Seafoam Quill', category: 'writing tool' },
+	{ name: 'Naga Totem', category: 'accessory' },
+	{ name: 'Seashell Necklace', category: 'accessory' }
+];

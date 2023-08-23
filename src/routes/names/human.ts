@@ -1,0 +1,22 @@
+export const humanNames = [
+	'Ironclad Mercenary',
+	'Rogue Bandit',
+	'Darkblade Assassin',
+	'Arcane Sorcerer',
+	'Shadowy Infiltrator',
+	'Corrupted Cultist',
+	'Dreadnought Warlord',
+	'Cursed Necromancer',
+	'Bloodthirsty Raider',
+	'Renegade Outlaw',
+	'Savage Marauder',
+	'Fiery Pyromancer',
+	'Vengeful Knight',
+	'Merciless Executioner',
+	'Twisted Witch',
+	'Brutal Gladiator',
+	'Herald of Chaos',
+	'Arcane Enchanter',
+	'Sinister Warlock',
+	'Ebonblade Reaver'
+];

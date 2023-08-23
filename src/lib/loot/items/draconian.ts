@@ -1,3 +1,4 @@
+import type { Item } from '../Item';
 import type { ClassItems } from './types';
 
 export const draconianClassItems: ClassItems = {
@@ -72,3 +73,16 @@ export const draconianClassItems: ClassItems = {
 		{ name: 'Staff of Inner Balance', category: 'two-handed weapon' }
 	]
 };
+
+export const draconianItems: Item[] = [
+	{ name: 'Dragon Scale Fragment', category: 'crafting material' },
+	{ name: 'Draconic Claw Necklace', category: 'accessory' },
+	{ name: "Serpent's Breath Flask", category: 'consumable' },
+	{ name: 'Fireforged Coin', category: 'coin' },
+	{ name: 'Ancient Draconian Script', category: 'scroll' },
+	{ name: 'Wyrmscale Satchel', category: 'bag' },
+	{ name: 'Fang-shaped Dagger', category: 'tool' },
+	{ name: 'Drakebone Inkwell', category: 'writing tool' },
+	{ name: 'Draconic Totem', category: 'accessory' },
+	{ name: 'Scaleskin Pouch', category: 'bag' }
+];
