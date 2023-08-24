@@ -1,3 +1,6 @@
+import { dev, browser } from '$app/environment';
+import { capitalize } from './util';
+
 export const uniqueBosses = [
 	{
 		name: 'Aurelius the Celestial',
@@ -201,3 +204,33 @@ export const uniqueBosses = [
 	},
 	{ name: 'Eldra the Ethereal', race: 'feyfolk', class: 'elementalist', title: 'Mistral Magus' }
 ];
+
+// const promptSuffix = [
+// 	'in spiral lightning background',
+// 	'perfect beautiful face',
+// 	'realistic',
+// 	'full body',
+// 	'standing on ground',
+// 	'circuit board',
+// 	'in intricate clothing',
+// 	'elegant pose',
+// 	'fantasy',
+// 	'illustration',
+// 	'artstation'
+// ];
+//
+// const sdPrompts = uniqueBosses.map((boss) => {
+// 	const main = [`(${boss.name}:1.3)`, `(${boss.title}:1.5)`, `(${boss.race} ${boss.class}:1.7)`];
+// 	const lines = main.concat(promptSuffix);
+// 	const prompt = lines.join(', ');
+//
+// 	const filename = boss.name.toLowerCase().replace(/\s/g, '-');
+// 	const file = `${filename}.png`;
+//
+// 	return { file, prompt };
+// });
+//
+// if (dev && browser) {
+// 	const copyPaste = sdPrompts.map((prompt) => [prompt.file, prompt.prompt].join('\n')).join('\n\n');
+// 	window.sdPrompts = copyPaste;
+// }

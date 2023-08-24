@@ -1,9 +1,21 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import type { Enemy } from '$lib/loot/Enemy';
+	import { capitalize } from './util';
 
 	export let enemy: Enemy;
+	let image = '';
 
-	const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+	$: {
+		if (browser) {
+			image = '';
+
+			if (enemy.title) {
+				const slug = enemy.name.toLowerCase().replaceAll(' ', '-');
+				image = `/boss-images/${slug}.png`;
+			}
+		}
+	}
 </script>
 
 <section>
@@ -37,6 +49,10 @@
 			{capitalize(enemy.class)}
 		</span>
 	</header>
+
+	{#if image}
+		<img src={image} alt={enemy.name} />
+	{/if}
 </section>
 
 <style>
@@ -45,6 +61,11 @@
 		padding: var(--size-4);
 		background-color: var(--gray-8);
 		border-radius: var(--radius-2);
+
+		text-align: center;
+		display: flex;
+		flex-flow: column nowrap;
+		gap: var(--size-4);
 	}
 
 	header {
@@ -57,7 +78,7 @@
 
 	span {
 		display: flex;
-		gap: var(--size-1);
+		gap: var(--size-2);
 	}
 
 	strong {
@@ -77,5 +98,12 @@
 
 	.big {
 		font-size: var(--font-size-3);
+	}
+
+	img {
+		max-height: 50vh;
+		margin: 0 auto;
+		border-radius: var(--radius-3);
+		box-shadow: var(--shadow-2);
 	}
 </style>
